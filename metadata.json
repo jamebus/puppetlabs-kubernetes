@@ -1,6 +1,6 @@
 {
   "name": "puppetlabs-kubernetes",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "author": "Puppet",
   "summary": "The module installs and configures a Kubernetes cluster",
   "license": "Apache-2.0",
@@ -22,7 +22,7 @@
     },
     {
       "name": "puppetlabs-translate",
-      "version_requirement": ">= 0.0.1 <= 1.2.0"
+      "version_requirement": ">= 1.0.0 < 3.0.0"
     },
     {
       "name": "herculesteam-augeasproviders_sysctl",
@@ -64,7 +64,7 @@
       "version_requirement": ">= 5.5.10 < 7.0.0"
     }
   ],
-  "pdk-version": "1.10.0",
+  "pdk-version": "1.11.1",
   "template-url": "https://github.com/puppetlabs/pdk-templates#master",
-  "template-ref": "heads/master-0-g7827fc2"
+  "template-ref": "heads/master-0-gb096033"
 }

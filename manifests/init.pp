@@ -236,6 +236,14 @@
 #   The clusters ca key. Must be passed as a string not a file.
 #   Defaults to undef
 #
+# [*kubernetes_front_proxy_ca_crt*]
+#   The clusters front-proxy ca certificate. Must be passed as a string not a file.
+#   Defaults to undef
+#
+# [*kubernetes_front_proxy_ca_key*]
+#   The clusters front-proxy ca key. Must be passed as a string not a file.
+#   Defaults to undef
+#
 # [*sa_key*]
 #   The service account key. Must be passed as string not a file.
 #   Defaults to undef
@@ -396,6 +404,10 @@
 # [*environment*]
 # The environment passed to kubectl commands.
 # Defaults to setting HOME and KUBECONFIG variables
+# 
+# [*ttl_duration*]
+# Availability of the token
+# Default to 24h 
 #
 # Authors
 # -------
@@ -461,7 +473,10 @@ class kubernetes (
   Integer $api_server_count                          = undef,
   String $kubernetes_ca_crt                          = undef,
   String $kubernetes_ca_key                          = undef,
+  String $kubernetes_front_proxy_ca_crt              = undef,
+  String $kubernetes_front_proxy_ca_key              = undef,
   String $token                                      = undef,
+  String $ttl_duration                               = '24h',
   String $discovery_token_hash                       = undef,
   String $sa_pub                                     = undef,
   String $sa_key                                     = undef,
